@@ -104,7 +104,7 @@ impl FromMeta for MethodMeta {
     fn from_string(value: &str) -> Result<Self, Error> {
         match Method::from_str(value) {
             Ok(m) => Ok(MethodMeta(m)),
-            Err(()) => Err(Error::unsupported_format(&format!(
+            Err(_) => Err(Error::unsupported_format(&format!(
                 "Unknown HTTP method: '{}'",
                 value
             ))),
@@ -170,7 +170,7 @@ fn trim_angle_brackers(mut s: String) -> String {
 fn parse_attr(name: &str, args: &[NestedMeta]) -> Result<Route, Error> {
     match Method::from_str(name) {
         Ok(method) => parse_method_route_attr(method, args),
-        Err(()) => parse_route_attr(args),
+        Err(_) => parse_route_attr(args),
     }
 }
 

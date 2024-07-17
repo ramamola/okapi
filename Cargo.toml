@@ -10,9 +10,9 @@ members = [
     "examples/special-types",
     "examples/secure_request_guard",
     "examples/streams",
-    "examples/dyn_templates",
+    # "examples/dyn_templates",
     "examples/openapi_attributes",
     "examples/raw_identifiers",
-    "examples/websocket",
+    # "examples/websocket",
 ]
 resolver = "2"

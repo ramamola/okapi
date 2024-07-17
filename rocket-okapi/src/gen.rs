@@ -129,8 +129,12 @@ fn set_operation(path_item: &mut PathItem, method: Method, op: Operation) {
         Head => &mut path_item.head,
         Patch => &mut path_item.patch,
         Trace => &mut path_item.trace,
+
         // Connect not available in OpenAPI3. Maybe should set in extensions?
         Connect => return,
+
+        // Temp
+        _ => return,
     };
     assert!(option.is_none());
     option.replace(op);
