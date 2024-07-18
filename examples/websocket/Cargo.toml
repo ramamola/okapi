@@ -5,7 +5,7 @@ authors = ["Ralph Bisschops <ralph.bisschops.dev@gmail.com>"]
 edition = "2021"
 
 [dependencies]
-rocket = { git = "https://github.com/SergioBenitez/Rocket", branch = "master", default-features = false, features = [
+rocket = { git = "https://github.com/rwf2/Rocket", rev = "f50b604", default-features = false, features = [
 	"json",
 ] }
 rocket_ws = "0.1.0"
