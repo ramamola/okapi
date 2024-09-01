@@ -30,6 +30,8 @@ impl OpenApiSettings {
     }
 }
 
+unsafe impl Send for OpenApiSettings {}
+
 /// Contains a named url.
 #[derive(Debug, Clone, Deserialize, Serialize)]
 pub struct UrlObject {
